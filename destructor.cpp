@@ -1,24 +1,23 @@
 #include<iostream>
 using namespace std;
-class emp{
+class add{
     public:
-           int eno;
-           char ename[20];
-           float sal;
-           emp()
-           {
-              cout<<"enter emp no,ename,sal";
-              cin>>eno>>ename>>sal;
+            int *a,*b,c;
+            add(){
+                a=new int(11);
+                b=new int(11);
+                c=*a+*b;
+                cout<<"addition="<<c;
             }
-            void display()
+            ~add()
             {
-                cout<<"emp no="<<eno;
-                cout<<"emp name="<<ename;
-                cout<<"sal="<<sal;
+                delete a;
+                delete b;
+                cout<<"memory free";
             }
 };
-int main()
-{
-    emp ob;
-    ob.display();
-}
+ int main()
+ {
+    add ob;
+
+ }
